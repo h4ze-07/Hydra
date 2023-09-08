@@ -5,7 +5,7 @@ import WhyBuildCard from '../components/WhyBuildCard';
 
 const WhyBuild = () => {
     return (
-        <section className='mx-auto max-w-[1312px] mt-[111px]'>
+        <section id='services' className='mx-auto max-w-[1312px] mt-[111px]'>
             
             {/* MOBILE SECTION */}
             <section className='md:hidden'></section>

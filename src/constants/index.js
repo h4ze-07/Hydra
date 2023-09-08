@@ -1,18 +1,25 @@
-import { location, mail, phoneCall } from "../assets/icons"
+import { facebook, instagram, linkedin, location, mail, phoneCall, pinterest, twitter, youtube } from "../assets/icons"
 import { education, oculus, outdoor, selfcare, simulation, techsBg, unity, unrealEngine, vive } from "../assets/images/indedx"
 
 
 
 export const headerVars = {
     headerLinks: [
-        {href: '/about', title: 'ABOUT'},
-        {href: '/services', title: 'SERVICES'},
-        {href: '/technologies', title: 'TECHNOLOGIES'},
-        {href: '/how-to', title: 'HOW TO'},
+        {href: '#about', title: 'ABOUT'},
+        {href: '#services', title: 'SERVICES'},
+        {href: '#technologies', title: 'TECHNOLOGIES'},
+        {href: '#howTo', title: 'HOW TO'},
     ],
     headerBtns: [
-        { title: 'CONTACT', styles: '' },
-        { title: 'JOIN HYDRA', styles: '' },
+        { 
+            title: 'CONTACT', 
+            btnStyles: ' border-2 border-white rounded-[40px] overflow-hidden',
+            pStyles: 'text-[12px] text-white font-bold py-[13px] px-[36px]' 
+        },
+        { 
+            title: 'JOIN HYDRA', 
+            btnStyles: ' border-2 border-[transparent] rounded-[40px] overflow-hidden', 
+            pStyles: 'headerBtnGradient text-[12px] text-[#343045] font-bold py-[13px] px-[38px]'},
     ]
 }
 
@@ -23,7 +30,7 @@ export const heroLinks = [
         subtitle: 'Union St, Seattle, WA 98101, United States',
         img: location,
         styles: {
-            container: 'flex justify-center gap-[15px] my-[25px] py-[25px] pl-[53px] pr-[43px] border-r border-[#C0B7E833]',
+            container: 'flex justify-center gap-[15px] my-[25px] py-[25px]',
             title: 'font-bold text-[24px] text-white',
             subtitle: 'text-white text-[14px]'
         }
@@ -34,7 +41,7 @@ export const heroLinks = [
         subtitle: '(110) 1111-1010',
         img: phoneCall,
         styles: {
-            container: 'flex justify-center gap-[15px] my-[25px] py-[25px] pl-[50px] pr-[60px] border-r border-[#C0B7E833]',
+            container: 'flex justify-center gap-[15px] my-[25px] py-[25px]',
             title: 'font-bold text-[24px] text-white',
             subtitle: 'text-white text-[14px]'
         }
@@ -45,7 +52,7 @@ export const heroLinks = [
         subtitle: 'Contact@HydraVTech.com',
         img: mail,
         styles: {
-            container: 'flex justify-center gap-[15px] my-[25px] py-[25px] pl-[55px]',
+            container: 'flex justify-center gap-[15px] my-[25px] py-[25px] ',
             title: 'font-bold text-[24px] text-white',
             subtitle: 'text-white text-[14px]'
         }
@@ -156,6 +163,96 @@ export const howWeBuildSection = {
     ]
 }
 
+
+export const footerConsts = {
+    footerLinkGroup1: [
+        {
+            id: 1,
+            title: 'ABOUT',
+            href: '#about'
+        },
+        {
+            id: 2,
+            title: 'SERVICES',
+            href: '#services'
+        },
+        {
+            id: 3,
+            title: 'TECHNOLOGIES',
+            href: '#technologies'
+        },
+        {
+            id: 4,
+            title: 'HOW TO',
+            href: '#howTo'
+        },
+        {
+            id: 5,
+            title: 'JOIN HYDRA',
+            href: '#joinHydra'
+        },
+    ],
+    footerLinkGroup2: [
+        {
+            id: 1,
+            title: 'F.A.Q',
+            href: '/'
+        },
+        {
+            id: 2,
+            title: 'SITEMAP',
+            href: '/'
+        },
+        {
+            id: 3,
+            title: 'CONDITIONS',
+            href: '/'
+        },
+        {
+            id: 4,
+            title: 'LICENSES',
+            href: '/'
+        },
+    ],
+    socialMedias: [
+        {
+            id: 1,
+            title: 'facebook',
+            href: '/',
+            img: facebook
+        },
+        {
+            id: 2,
+            title: 'twitter',
+            href: '/',
+            img: twitter
+        },
+        {
+            id: 3,
+            title: 'linkedin',
+            href: '/',
+            img: linkedin
+        },
+        {
+            id: 4,
+            title: 'youtube',
+            href: '/',
+            img: youtube
+        },
+        {
+            id: 5,
+            title: 'instagram',
+            href: '/',
+            img: instagram
+        },
+        {
+            id: 6,
+            title: 'pinterest',
+            href: '/',
+            img: pinterest
+        },
+    ]
+}
 
 
 // export const headerLinks = [

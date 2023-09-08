@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { hamburgerMenu, logo, logoText, mobileBgLines } from "../assets/icons";
 import { heroGirl } from "../assets/images/indedx";
 import Navbar from "../components/Navbar";
-import { heroLinks } from "../constants";
+import { headerVars, heroLinks } from "../constants";
 import HeroLinkItem from "../components/HeroLinkItem";
 
 const Hero = () => {
@@ -31,26 +31,41 @@ const Hero = () => {
             
 
 
-            <header className="flex justify-between items-end px-[20px]">
-                <div className="flex gap-[11px] items-end">
-                    <img src={logo} alt="logo" width={69} height={60} />
-                    <img src={logoText} alt="logo text" width={46} height={28} className="mb-[5px]" />
+            <header className="flex justify-between items-end lg:items-center px-[20px]">
+                <div className="flex gap-[11px] lg:gap-[15px] items-end lg:items-center">
+                    <img src={logo} alt="logo" className="w-[69px] h-[69px] lg:w-[102px] lg:h-[103px]"/>
+                    <img src={logoText} alt="logo text" width={46} height={28} className="mb-[5px] lg:mb-0 w-[46px] h-[28px] lg:w-[76px] lg:h-[46px]" />
                 </div>
 
 
-                <div className="cursor-pointer">
+                <div className="cursor-pointer lg:hidden">
                     <img src={hamburgerMenu} alt="menu" width={33} height={26}
                     className="mb-[5px]"
                     />
                 </div>
 
 
-                
+                <div className="hidden lg:flex items-center lg:gap-[60px] xl:gap-[140px]">
 
-                <div className="hidden">
-                    <button>btn1</button>
-                    <button>btn2</button>
+                    <div className="flex lg:gap-[25px] xl:gap-[41px]">
+                        {headerVars.headerLinks.map((link) => (
+                            <a key={link.title} href={link.href} className="text-[12px] text-white font-bold">{link.title}</a>
+                        ))}
+
+                    </div>
+
+                    <div className="flex lg:gap-[25px] xl:gap-[38px]">
+                        {headerVars.headerBtns.map((btn) => (
+                            <button key={btn.title} className={btn.btnStyles}>
+                                <p className={btn.pStyles}>
+                                    {btn.title}
+                                </p>
+                            </button>
+                        ))}
+                    </div>
                 </div>
+
+            
 
             </header>
 
@@ -58,16 +73,18 @@ const Hero = () => {
 
 
             {/* HERO START ---------------------------------------------------- */}
-            <section className="w-full mt-[58px] mx-auto mb-[53px] flex flex-col 
+            <section className="w-full mt-[58px] px-[20px] mx-auto mb-[53px] flex flex-col 
             md:flex-row-reverse md:justify-between md:items-center md:px-5"> 
-                <div className=" overflow-hidden rounded-tl-[100px] rounded-tr-[100px] rounded-br-[100px] rounded-bl-[240px] border-[11px] border-[#00000013] max-w-[340px] h-[296px] mx-auto relative 
-                md:mx-0 md:max-w-[390px] md:h-[356px] lg:max-w-[490px] lg:h-[426px] ">
-                    <img src={heroGirl} alt="" className="h-full object-cover" />
+                <div className=" overflow-hidden rounded-tl-[100px] rounded-tr-[100px] rounded-br-[100px] rounded-bl-[240px] border-[11px] border-[#00000013] mx-auto
+                w-full h-full max-w-[600px]
+                md:max-w-[390px] md:h-[356px] lg:max-w-[490px] lg:h-[426px]
+                md:mx-0 ">
+                    <img src={heroGirl} alt="" className="h-full w-full object-cover" />
                 </div>
 
-                <div className="text-center md:text-start font-bold text-[#FFFFFF] text-[24px] lg:text-[40px] ">
-                    <p className="mb-[8px]"><span className="text-[#C0B7E8] text-[36px] lg:text-[46px]">Dive</span> Into The Depths</p>
-                    <p>Of <span className="text-[#C0B7E8] text-[32px] lg:text-[46px]">Virtual Reality</span> </p>
+                <div className="text-center md:text-start font-bold text-[#FFFFFF] text-[24px] tablet:text-[34px] lg:text-[40px] ">
+                    <p className="mb-[8px]"><span className="text-[#C0B7E8] text-[36px] tablet:text-[42px] lg:text-[46px]">Dive</span> Into The Depths</p>
+                    <p>Of <span className="text-[#C0B7E8] text-[32px] tablet:text-[42px] lg:text-[46px]">Virtual Reality</span> </p>
 
                     <p className="hidden md:block max-w-[350px] lg:max-w-[450px] text-[16px] font-normal mt-[20px] mb-[30px] lg:mt-[36px] lg:mb-[66px]">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
@@ -90,7 +107,7 @@ const Hero = () => {
 
 
 
-            <section className="bg-[#3A3456] mx-auto rounded-[90px] px-[11px] ">
+            <section className="heroInfo mx-auto rounded-[90px] px-[11px] ">
 
 
                 <div className="lg:hidden flex gap-[10px] md:gap-[20px] justify-between items-center">
@@ -135,7 +152,7 @@ const Hero = () => {
             </section>
             
             <div className="hidden lg:block px-[20px]">
-                <section className='flex items-center bg-[#3A3456] lg:mt-[103px] lg:mb-[90px] max-w-[1272px] rounded-[90px]'>
+                <section className='heroInfo flex justify-evenly items-center bg-[#3A3456] lg:mt-[103px] lg:mb-[90px] max-w-[1272px] rounded-[90px]'>
                     {heroLinks.map( (link) => (
                             <HeroLinkItem key={link.id} link={link} />
                     ))}

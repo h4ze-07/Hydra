@@ -3,7 +3,7 @@ import { technologies } from '../constants';
 
 const Technologies = () => {
     return (
-        <section className='mx-auto max-w-[1312px] mt-[56px] md:mt-[114px]'>
+        <section id='technologies' className='mx-auto max-w-[1312px] mt-[56px] md:mt-[114px]'>
             
             <section className='px-[20px] mx-auto'>
                 <div className='technologies w-full rounded-[160px] bg-[#211E2E] text-center pt-[51px] pb-[49px] lg:pt-[108px] lg:pb-[96px]'>

@@ -10,6 +10,17 @@ import phoneCall from './phone-call.svg';
 
 import howWeBuildLine from './howWeBuildLine.svg'
 
+import instagram from './instagram.svg';
+import linkedin from './linkedin.svg';
+import facebook from './facebook.svg';
+import twitter from './twitter.svg';
+import pinterest from './pinterest.svg';
+import youtube from './youtube.svg';
+
+import FooterLines from './footerLines.svg';
+
+import footerMenuLine from './footerMenuLine.svg'
+
 export {
     logo,
     logoText,
@@ -19,4 +30,12 @@ export {
     mail,
     phoneCall,
     howWeBuildLine,
+    instagram,
+    linkedin,
+    facebook,
+    twitter,
+    pinterest,
+    youtube,
+    FooterLines,
+    footerMenuLine
 }

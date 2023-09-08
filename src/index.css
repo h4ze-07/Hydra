@@ -7,12 +7,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #302C42;
 }
 
+
+/* HERO SECTION */
+
+.headerBtnGradient {
+  background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+}
+
+.heroInfo {
+  background: radial-gradient(290.76% 50.13% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
+}
+
+
+/* WHY WE BUILD SECTION */
 
 .whyBuildCard {
   background: radial-gradient(50% 50% at 50% 50%, #433D60 0%, #211E2E 100%);
@@ -23,24 +37,62 @@ body {
 }
 
 
+/* TECHNOLOGIES SECTION*/
+
+
 .technologies {
   box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
   background: url('./assets/images/techsBg.jpg') no-repeat;
   background-size: cover;
   background-position: center;
-  /* background: linear-gradient(0deg, rgba(48, 44, 66, 0.79) 0%, rgba(48, 44, 66, 0.79) 100%), url('./assets/images/techsBg.jpg'), lightgray 50% / cover no-repeat; */
 }
 
 .techBtn {
   background: linear-gradient(268deg, #C0B7E8 -0.6%, #8176AF 98.31%);
 }
 
+
+/* HOW WE BUILD SECTION */
+
 .howWeBuild {
   background: url('./assets/icons/howWeBuildLine.svg');
   background-repeat: no-repeat;
-  background-position: start;
+  background-position: top 20px left 0;
+  background-size: contain;
 }
 
 .buildCircle {
   background: linear-gradient(251deg, #C0B7E8 12.87%, #8176AF 89.33%);
+}
+
+
+/* CONTACT SECTION */
+
+.contact-form {
+  background: radial-gradient(50% 50% at 50% 50%, #403A5F 0%, #211E2E 100%);
+}
+
+.formBtn {
+  background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+}
+
+.inputFormStyles {
+  @apply bg-transparent rounded-[40px] text-white border-2 border-white py-[18px] px-[29px] placeholder:text-[#FFF] placeholder:text-[14px] 
+}
+
+/* FOOTER */
+
+/* .footer {
+  background: url('./assets/icons/FooterLines.svg');
+  background-repeat: no-repeat;
+  background-size: contain; 
+} */
+
+.groupLinks {
+  @apply hidden lg:flex flex-col gap-3 items-start
+}
+
+.footerBtn {
+  background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+  @apply rounded-[40px] mt-[47px] mb-[61px] w-full max-w-[295px] md:max-w-[214px] block mx-auto md:mx-0 text-[#343045] font-bold text-[14px] py-[19px] md:py-[17px] md:text-[12px]
 }
