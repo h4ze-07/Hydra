@@ -1,11 +1,17 @@
-import React from 'react';
+import { motion } from "framer-motion";
+
 
 const SectionHead = ({data}) => {
     return (
         <div className='flex justify-between gap-[50px]'>
 
 
-            <div className='w-fit flex flex-col'>
+            <motion.div className='w-fit flex flex-col'
+            initial={{x: "-100%", opacity: 0}}
+            whileInView={{x: 0, opacity: 1}}
+            viewport={{once: false}}
+            transition={{duration: 0.7, delay: 0}}
+            >
                 <h2 className='font-bold text-[36px] text-white'>{data.title}</h2>
                             
                 <div className={data.arrowGapStyles}>
@@ -18,11 +24,16 @@ const SectionHead = ({data}) => {
                     </svg>
 
                 </div>
-            </div>
+            </motion.div>
 
-            <p className='max-w-[650px] text-white'>
+            <motion.p className='max-w-[650px] text-white'
+            initial={{x: "100%", opacity: 0}}
+            whileInView={{x: 0, opacity: 1}}
+            viewport={{once: false}}
+            transition={{duration: 0.7, delay: 0}}
+            >
                 {data.text}
-            </p>
+            </motion.p>
         </div>
     );
 }

@@ -15,14 +15,33 @@ body {
 }
 
 
+/* COMMON */
+
+.mobileSlidersBtn {
+  background: linear-gradient(268deg, #C0B7E8 -0.6%, #8176AF 98.31%);
+
+}
+
 /* HERO SECTION */
 
 .headerBtnGradient {
   background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
 }
 
+/* .lines {
+  background: url('./assets/icons/mobile-lines.svg');
+} */
+
 .heroInfo {
   background: radial-gradient(290.76% 50.13% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
+}
+
+
+/* INTRO SECTION */
+
+
+.introBtn {
+  background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
 }
 
 

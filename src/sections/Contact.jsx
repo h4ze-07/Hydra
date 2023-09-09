@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 const Contact = () => {
 
     return (
@@ -6,9 +8,14 @@ const Contact = () => {
             <div className='md:block px-[20px] mx-auto  overflow-hidden'>
 
                 <div className='contact-form rounded-[40px] md:rounded-[75px] lg:rounded-[100px]'>
-                    <h2 className='text-center text-white text-[24px] md:text-[30px] lg:text-[36px] font-bold pt-[45px]'>
+                    <motion.h2 className='text-center text-white text-[24px] md:text-[30px] lg:text-[36px] font-bold pt-[45px]'
+                    initial={{y: '-100%', opacity: 0}}
+                    whileInView={{y: 0, opacity: 1}}
+                    viewport={{once: false}}
+                    transition={{delay: 0.3, duration: 0.7}}
+                    >
                         JOIN HYDRA
-                    </h2>
+                    </motion.h2>
 
                     <svg width="414" height="2" viewBox="0 0 414 2" fill="none" xmlns="http://www.w3.org/2000/svg" className='max-w-[207px] md:max-w-[320px] lg:max-w-none mx-auto my-[21px]'>
                     <path d="M0 1H414" stroke="url(#paint0_linear_13_46)"/>
@@ -22,18 +29,26 @@ const Contact = () => {
                     </defs>
                     </svg>
 
-
-
-                    <h3 className='text-center mx-auto text-[24px] md:text-[30px] lg:text-[36px] text-[#FFF] font-light mb-[36px] block lg:flex justify-center gap-2'>
+                    <motion.h3 className='text-center mx-auto text-[24px] md:text-[30px] lg:text-[36px] text-[#FFF] font-light mb-[36px] block lg:flex justify-center gap-2'
+                    initial={{y: '-100%', opacity: 0}}
+                    whileInView={{y: 0, opacity: 1}}
+                    viewport={{once: false}}
+                    transition={{delay: 0.5, duration: 0.5}}
+                    >
                         <p>
                             Let’s Build 
                         </p>
                         <p>
                             Your VR Experience
                         </p>
-                    </h3>
+                    </motion.h3>
 
-                    <form className='grid grid-cols-1 md:grid-cols-2 gap-y-[22px] md:gap-x-[10px] lg:gap-y-[39px] px-[21px] md:px-[56px] lg:px-[107px] overflow-hidden' onSubmit={(e) => e.preventDefault()} >
+                    <motion.form className='grid grid-cols-1 md:grid-cols-2 gap-y-[22px] md:gap-x-[10px] lg:gap-y-[39px] px-[21px] md:px-[56px] lg:px-[107px] overflow-hidden' onSubmit={(e) => e.preventDefault()} 
+                    initial={{y: '100%', opacity: 0}}
+                    whileInView={{y: 0, opacity: 1}}
+                    viewport={{once: false}}
+                    transition={{delay: 0.5, duration: 0.6}}
+                    >
                         <input type="text" name="name" id="name" placeholder='First Name' className='inputFormStyles'/>
                         <input type="text" name="surname" id="surname" placeholder='Last Name' className='inputFormStyles'/>
                         <input type="email" name="email" id="email" className='inputFormStyles' placeholder='Email'/>
@@ -45,7 +60,7 @@ const Contact = () => {
                             SEND TO HYDRA
                             </button>   
                         </div>
-                    </form>
+                    </motion.form>
 
                     
                 </div>

@@ -3,6 +3,8 @@ import { footerMenuLine, logo } from '../assets/icons';
 import { footerConsts } from '../constants';
 import FooterMenuLine from '../components/FooterMenuLine';
 
+import { easeOut, motion } from 'framer-motion';
+
 const Footer = () => {
     return (
         <footer className='footer mx-auto max-w-[1312px] mt-[81px] '>
@@ -10,40 +12,71 @@ const Footer = () => {
             <div className='max-w-[1312px]'>
                 <div className='px-[20px] mx-auto'>
                     <section className='flex flex-col md:flex-row items-center md:items-start md:justify-evenly lg:justify-between'>
-                        <div>
+                        <motion.div
+                        initial={{scale: 0, rotate: 360, opacity: 0}}
+                        whileInView={{scale: 1, rotate: 0, opacity: 1}}
+                        viewport={{once: false}}
+                        transition={{delay: 0.3, duration: 1, ease: easeOut}}
+                        >
                             <img src={logo} alt="logo" className='w-[185px] h-[187px]'/>
-                        </div>
+                        </motion.div>
 
                         <FooterMenuLine />
 
                         <div className='groupLinks'>
                             {footerConsts.footerLinkGroup1.map((link) => (
-                                <a key={link.id} href={link.href} className='text-white font-bold'>{link.title}</a>
+                                <motion.a key={link.id} href={link.href} className='text-white font-bold'
+                                initial={{y: '-100%', opacity: 0}}
+                                whileInView={{y: 0, opacity: 1}}
+                                viewport={{once: false}}
+                                transition={{delay: 0.25 * link.id, duration: 0.5}}
+                                >{link.title}</motion.a>
                             ))}
                         </div>
 
                         <FooterMenuLine />
 
-                        <div className='groupLinks'>
+                        <motion.div className='groupLinks'
+                        >
                             {footerConsts.footerLinkGroup2.map((link) => (
-                                <a key={link.id} href={link.href} className='text-white font-bold'>{link.title}</a>
+                                <motion.a key={link.id} href={link.href} className='text-white font-bold'
+                                initial={{y: '-100%', opacity: 0}}
+                                whileInView={{y: 0, opacity: 1}}
+                                viewport={{once: false}}
+                                transition={{delay: 0.45 * link.id, duration: 0.5}}
+                                >{link.title}</motion.a>
                             ))}
-                        </div>
+                        </motion.div>
                         
                         <FooterMenuLine />
                         
                         <div>
-                            <h2 className='font-bold text-[white] mt-[56px] md:mt-0 text-center md:text-left mb-[29px]'>SOCIALIZE WITH HYDRA</h2>
+                            <motion.h2 className='font-bold text-[white] mt-[56px] md:mt-0 text-center md:text-left mb-[29px]'
+                            initial={{y: '-100%', opacity: 0}}
+                            whileInView={{y: 0, opacity: 1}}
+                            viewport={{once: false}}
+                            transition={{delay: 0.5, duration: 0.5}}
+                            >SOCIALIZE WITH HYDRA</motion.h2>
                             <div className='flex gap-[20px] justify-center items-center flex-wrap'>
                                 {footerConsts.socialMedias.map((media) => (
-                                    <a key={media.id} href={media.href}>
+                                    <motion.a key={media.id} href={media.href}
+                                    initial={{x: '100%', opacity: '0'}}
+                                    whileInView={{x: 0, opacity: 1}}
+                                    viewport={{once: false}}
+                                    transition={{delay: 0.3 * media.id, transition: 0.5}}
+                                    >
                                         <img src={media.img} alt={media.title} />
-                                    </a>
+                                    </motion.a>
                                 ))}
                             </div>
-                            <button className='footerBtn'>
+                            <motion.button className='footerBtn'
+                            initial={{y: '100%', opacity: 0}}
+                            whileInView={{y: 0, opacity: 1}}
+                            viewport={{once: false}}
+                            transition={{delay: 0.5, duration: 0.5}}
+                            >
                                 BUILD YOUR WORLD
-                            </button>
+                            </motion.button>
                         </div>
                         
 
@@ -77,10 +110,15 @@ const Footer = () => {
                         </defs>
                         </svg>
                         
-                        <p className='w-full max-w-[273px] mx-auto mt-[38px] flex flex-col justify-center items-center gap-2  text-white font-bold text-[14px] mb-[89px] md:flex-row md:mt-[49px] md:mb-[59px] whitespace-nowrap'>
+                        <motion.p className='w-full max-w-[273px] mx-auto mt-[38px] flex flex-col justify-center items-center gap-2  text-white font-bold text-[14px] mb-[89px] md:flex-row md:mt-[49px] md:mb-[59px] whitespace-nowrap'
+                        initial={{x: '-100%', opacity: 0}}
+                        whileInView={{x: 0, opacity: 1}}
+                        viewport={{once: false}}
+                        transition={{delay: 0.5, duration: 0.9}}
+                        >
                             <span>2023 © HYDRA LANDING PAGE</span> 
                             <span>ALL RIGHTS RESERVED</span> 
-                        </p>
+                        </motion.p>
                     </div>
                 </div>
             </div>

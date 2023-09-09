@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import logoText from './logo-text.svg';
+
 import hamburgerMenu from './Hamburger-Button.svg';
+import closeMenu from './closeMenu.svg'
 
 import mobileBgLines from './mobile-lines.svg';
 
@@ -25,6 +27,7 @@ export {
     logo,
     logoText,
     hamburgerMenu,
+    closeMenu,
     mobileBgLines,
     location,
     mail,
