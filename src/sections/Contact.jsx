@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <section id="joinHydra" className='mt-[81px] md:mt-[96px] lg:mt-[112px] mx-auto max-w-[1312px] z-10'>
             
-            <div className='md:block px-[20px] mx-auto  overflow-hidden'>
+            <div className='md:block px-[20px] mx-auto overflow-hidden'>
 
                 <div className='contact-form rounded-[40px] md:rounded-[75px] lg:rounded-[100px]'>
                     <motion.h2 className='text-center text-white text-[24px] md:text-[30px] lg:text-[36px] font-bold pt-[45px]'

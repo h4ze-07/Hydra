@@ -58,7 +58,7 @@ const Hero = () => {
 
             {/* HERO START ---------------------------------------------------- */}
             <section className="w-full px-[20px] mx-auto mb-[53px] flex flex-col 
-            md:flex-row-reverse md:justify-between md:items-center md:px-5 pt-[100px] md:pt-[170px] lg:pt-[200px]">
+            md:flex-row-reverse md:justify-between md:items-center md:px-5 pt-[100px] md:pt-[170px] lg:pt-[200px] overflow-hidden">
 
                 <div className="lines absolute top-0 left-0 md:left-[30%] w-full h-full flex items-start justify-center md:justify-end">
 
@@ -119,9 +119,7 @@ const Hero = () => {
                     <img src={heroGirl} alt="" className="h-full w-full object-cover" />
                 </motion.div>
 
-                <motion.div className="text-center md:text-start font-bold text-[#FFFFFF] text-[24px] tablet:text-[34px] lg:text-[40px] z-10"
-                
-                >
+                <motion.div className="text-center md:text-start font-bold text-[#FFFFFF] text-[24px] tablet:text-[34px] lg:text-[40px] z-10">
                     <motion.p className="mb-[8px]"
                     initial={{x: '-100%'}}
                     whileInView={{x: 0}}
@@ -216,7 +214,7 @@ const Hero = () => {
             </motion.section>
             
             {/* DESCTOP SECTION */}
-            <motion.div className="hidden lg:block px-[20px]"
+            <motion.div className="hidden lg:block px-[20px] overflow-hidden"
             initial={{y: "100%", opacity: 0}}
             whileInView={{y: 0, opacity: 1}}
             viewport={{once: false}}

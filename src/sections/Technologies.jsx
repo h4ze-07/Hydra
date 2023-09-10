@@ -11,7 +11,7 @@ const Technologies = () => {
     const [data, nextSlider, prevSlider] = useCreateSider(technologies.techList, 1, 4)
 
     return (
-        <section id='technologies' className='mx-auto max-w-[1312px] mt-[56px] md:mt-[114px]'>
+        <section id='technologies' className='mx-auto max-w-[1312px] mt-[56px] md:mt-[114px] overflow-hidden'>
             
             <section className='px-[20px] mx-auto'>
                 <motion.div className='technologies w-full rounded-[160px] bg-[#211E2E] text-center pt-[51px] pb-[49px] lg:pt-[108px] lg:pb-[96px]'
@@ -38,7 +38,7 @@ const Technologies = () => {
                     </motion.h3>
                 </motion.div>
 
-                <motion.button className='hidden md:block w-[70px] h-[70px] rounded-full border-[20px] border-[#0d0d0d52] box-content overflow-hidden z-10 mx-auto -m-[60px]'
+                <motion.a href='#home' className='hidden md:block w-[70px] h-[70px] rounded-full border-[20px] border-[#0d0d0d52] box-content overflow-hidden z-10 mx-auto -m-[60px]'
                 initial={{y: '-100%', opacity: 0}}
                 whileInView={{y: 0, opacity: 1}}
                 viewport={{once: false}}
@@ -49,11 +49,11 @@ const Technologies = () => {
                             <path d="M17.5 25L30 37.5L42.5 25" stroke="#433D60" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                     </div>
-                </motion.button>
+                </motion.a>
             </section>
 
             {/* MOBILE SECTION */}
-            <section className=' tablet:hidden '>
+            <section className=' tablet:hidden overflow-hidden'>
                 <div className='flex relative items-center justify-center'>
                     <SliderBtnPrev func={prevSlider} />
                     <img src={data.img} alt={data.title} className={data.styles} />
@@ -64,7 +64,7 @@ const Technologies = () => {
 
 
             {/* DESKTOP SECTION */}
-            <section className='hidden tablet:block px-[20px] mx-auto'>
+            <section className='hidden tablet:block px-[20px] mx-auto overflow-hidden'>
 
                 <div className='grid grid-cols-2 lg:grid-cols-4 mt-[20px] content-center items-center gap-3'>
                     {technologies.techList.map((item) => (

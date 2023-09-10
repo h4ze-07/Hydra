@@ -13,7 +13,7 @@ const WhyBuild = () => {
     const [data, nextSlider, prevSlider] = useCreateSider(whyBuildCards, 1, 4)
 
     return (
-        <section id='services' className='mx-auto max-w-[1312px] mt-[60px] md:mt-[111px]'>
+        <section id='services' className='mx-auto max-w-[1312px] mt-[60px] md:mt-[111px] overflow-hidden'>
             
             {/* MOBILE SECTION */}
             <section className='md:hidden'>
@@ -44,12 +44,12 @@ const WhyBuild = () => {
 
 
             {/* DESKTOP SECTIOM */}
-            <section className='hidden md:block px-[20px] mx-auto'>
+            <section className='hidden md:block px-[20px] mx-auto overflow-hidden'>
 
                 <SectionHead data={whyBuildHead} />
 
 
-                <section className='flex gap-[10px] mt-[107px] justify-center flex-wrap '>
+                <section className='flex gap-[10px] mt-[107px] justify-center flex-wrap overflow-hidden'>
                     {whyBuildCards.map((card) => (
                         <WhyBuildCard key={card.label} data={card} />
                     ))}
