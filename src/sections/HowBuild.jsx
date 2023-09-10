@@ -6,7 +6,7 @@ import SliderBtnPrev from '../components/SliderBtnPrev';
 import SliderBtnNext from '../components/SliderBtnNext';
 import useCreateSider from '../hooks/useCreateSider';
 
-import { delay, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const HowBuild = () => {
 
@@ -19,12 +19,22 @@ const HowBuild = () => {
             <section className=''>
 
                 <div className='md:hidden'>
-                    <h2 className='text-white font-bold text-center text-[26px] mb-[16px]'>
+                    <motion.h2 className='text-white font-bold text-center text-[26px] mb-[16px]'
+                    initial={{opacity: 0, y: '-100%'}}
+                    whileInView={{opacity: 1, y: 0}}
+                    viewport={{once: false}}
+                    transition={{duration: 0.5, delay: 0.2}}
+                    >
                         HOW WE BUILD
-                    </h2>
-                    <h3 className='text-white font-light text-center text-[26px] mb-[37px]'>
+                    </motion.h2>
+                    <motion.h3 className='text-white font-light text-center text-[26px] mb-[37px]'
+                    initial={{opacity: 0, y: '-100%'}}
+                    whileInView={{opacity: 1, y: 0}}
+                    viewport={{once: false}}
+                    transition={{duration: 0.5, delay: 0.7}}
+                    >
                         WITH HYDRA VR?
-                    </h3>
+                    </motion.h3>
                 </div>
 
                 <div className='flex relative items-end tablet:hidden'>

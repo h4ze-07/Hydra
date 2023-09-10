@@ -109,7 +109,7 @@ const Intro = () => {
                                 n tempor.
                             </p>
 
-                            <button className='px-[43px] py-[17px] block bg-[#8176AF] text-[12px] rounded-[40px] font-bold'>LET’S GET IN TOUCH</button>
+                            <button className='introBtn px-[43px] py-[17px] block bg-[#8176AF] text-[12px] rounded-[40px] font-bold'>LET’S GET IN TOUCH</button>
                         </motion.div>
 
                     </section>

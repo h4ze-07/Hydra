@@ -21,11 +21,11 @@ const Hero = () => {
     }
 
     return (
-        <section className=" max-w-[1312px]  mx-auto relative flex flex-col mt-[26px] overflow-hidden">
+        <section id="home" className=" max-w-[1312px]  mx-auto relative flex flex-col mt-[26px] overflow-hidden">
 
             <header className="flex justify-between items-end md:items-center bg-[#302C42] fixed top-0 left-auto max-w-[1312px] mx-auto py-[15px] w-full px-[20px] z-20">
 
-                <motion.a href="/" className="flex gap-[11px] lg:gap-[15px] items-end md:items-center"
+                <motion.a href="#home" className="flex gap-[11px] lg:gap-[15px] items-end md:items-center"
                 initial={{x: '-200px'}}
                 animate={{x: 0}}
                 transition={{

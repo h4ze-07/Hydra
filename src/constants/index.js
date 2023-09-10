@@ -13,7 +13,7 @@ export const headerVars = {
     },
 
     headerMobileStyles: {
-        container: 'absolute left-0 top-[99px] w-[100vw] h-[100dvh]  bg-[#302C42] z-[50] flex flex-col gap-[40px]',
+        container: 'absolute left-0 top-[99px] w-[100vw] h-[100dvh]  bg-[#302C42] z-[50] flex flex-col gap-[40px] md:hidden',
         links: 'flex flex-col items-center gap-[30px]',
         btns: 'flex flex-col items-center gap-[15px]'
     },
@@ -26,8 +26,8 @@ export const headerVars = {
     headerBtns: [
         { 
             title: 'CONTACT', 
-            btnStyles: ' border-2 border-white rounded-[40px] overflow-hidden',
-            pStyles: 'text-[12px] text-white font-bold py-[13px] px-[36px]',
+            btnStyles: ' border-2 border-white rounded-[40px] overflow-hidden hover:border-[#302C42] hover:bg-gradient-to-tr hover:from-[#C0B7E8] to-[#8176AF]',
+            pStyles: 'text-[12px] text-white font-bold py-[13px] px-[36px] w-full h-full',
             motion: '-100%', 
         },
         { 

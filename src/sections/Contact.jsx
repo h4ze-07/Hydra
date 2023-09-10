@@ -44,7 +44,7 @@ const Contact = () => {
                     </motion.h3>
 
                     <motion.form className='grid grid-cols-1 md:grid-cols-2 gap-y-[22px] md:gap-x-[10px] lg:gap-y-[39px] px-[21px] md:px-[56px] lg:px-[107px] overflow-hidden' onSubmit={(e) => e.preventDefault()} 
-                    initial={{y: '100%', opacity: 0}}
+                    initial={{y: '-100%', opacity: 0}}
                     whileInView={{y: 0, opacity: 1}}
                     viewport={{once: false}}
                     transition={{delay: 0.5, duration: 0.6}}

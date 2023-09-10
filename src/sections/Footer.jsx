@@ -3,7 +3,7 @@ import { footerMenuLine, logo } from '../assets/icons';
 import { footerConsts } from '../constants';
 import FooterMenuLine from '../components/FooterMenuLine';
 
-import { easeOut, motion } from 'framer-motion';
+import { color, delay, easeOut, motion } from 'framer-motion';
 
 const Footer = () => {
     return (
@@ -17,15 +17,16 @@ const Footer = () => {
                         whileInView={{scale: 1, rotate: 0, opacity: 1}}
                         viewport={{once: false}}
                         transition={{delay: 0.3, duration: 1, ease: easeOut}}
+                        whileHover={{rotate: [360, 270, 360, 90, 0]}}
                         >
-                            <img src={logo} alt="logo" className='w-[185px] h-[187px]'/>
+                            <img src={logo} alt="logo" className='w-[185px] h-[187px] cursor-pointer'/>
                         </motion.div>
 
                         <FooterMenuLine />
 
                         <div className='groupLinks'>
                             {footerConsts.footerLinkGroup1.map((link) => (
-                                <motion.a key={link.id} href={link.href} className='text-white font-bold'
+                                <motion.a key={link.id} href={link.href} className='text-white font-bold hover:text-[#cd86f6ed] hover:underline underline-offset-4'
                                 initial={{y: '-100%', opacity: 0}}
                                 whileInView={{y: 0, opacity: 1}}
                                 viewport={{once: false}}
@@ -39,8 +40,9 @@ const Footer = () => {
                         <motion.div className='groupLinks'
                         >
                             {footerConsts.footerLinkGroup2.map((link) => (
-                                <motion.a key={link.id} href={link.href} className='text-white font-bold'
-                                initial={{y: '-100%', opacity: 0}}
+                                <motion.a key={link.id} href={link.href} className='text-white font-bold hover:text-[#cd86f6ed] hover:underline underline-offset-4'
+                                initial={{y: '-100%', opacity: 0,
+                                }}
                                 whileInView={{y: 0, opacity: 1}}
                                 viewport={{once: false}}
                                 transition={{delay: 0.45 * link.id, duration: 0.5}}
@@ -65,7 +67,9 @@ const Footer = () => {
                                     viewport={{once: false}}
                                     transition={{delay: 0.3 * media.id, transition: 0.5}}
                                     >
-                                        <img src={media.img} alt={media.title} />
+                                        <motion.img src={media.img} alt={media.title}
+                                        initial={{background: '#302C42'}} 
+                                        whileHover={{scale: 1.2, background: '#cd86f6ed'}}className='overflow-hidden rounded-full' />
                                     </motion.a>
                                 ))}
                             </div>

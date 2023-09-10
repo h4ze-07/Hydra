@@ -1,13 +1,13 @@
 import React from 'react';
 import { headerVars } from '../constants';
 
-import { easeIn, easeInOut, motion } from 'framer-motion';
+import { easeInOut, motion } from 'framer-motion';
 
 const Navbar = ({containerStyles, linkClick}) => {
     return (
         <motion.div className={containerStyles.container}
         initial={{scaleY: 0, opacity: 0}}
-        whileInView={{scaleY: 1, opacity: 1}}
+        animate={{scaleY: 1, opacity: 1 }}
         transition={{
             duration: 0.6,
             ease: easeInOut,
@@ -17,11 +17,10 @@ const Navbar = ({containerStyles, linkClick}) => {
             <div className={containerStyles.links}
             >
                 {headerVars.headerLinks.map((link) => (
-                    <motion.a key={link.id} href={link.href} className="text-[12px] text-white font-bold" onClick={linkClick}
+                    <motion.a key={link.id} href={link.href} className="text-[12px] text-white font-bold hover:text-[#cd86f6ed] hover:underline underline-offset-4" onClick={linkClick}
                     initial={{y: '-100%', opacity: 0}}
                     whileInView={{y: 0, opacity: 1}}
                     transition={{
-                        staggerChildren: 1,
                         duration: 0.5,
                         delay: 0.35 * link.id
                     }}
