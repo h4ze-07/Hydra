@@ -16,9 +16,9 @@ const HowBuild = () => {
         <section id='howTo'>
             
             {/* MOBILE SECTION */}
-            <section className=''>
+            <section className=' overflow-hidden'>
 
-                <div className='md:hidden'>
+                <div className='md:hidden overflow-hidden'>
                     <motion.h2 className='text-white font-bold text-center text-[26px] mb-[16px]'
                     initial={{opacity: 0, y: '-100%'}}
                     whileInView={{opacity: 1, y: 0}}
@@ -50,7 +50,7 @@ const HowBuild = () => {
 
             {/* DESKTOP SECTION */}
 
-            <section className='mx-auto max-w-[1312px] mt-[0] md:mt-[69px] hidden md:block'>
+            <section className='mx-auto max-w-[1312px] mt-[0] md:mt-[69px] hidden md:block overflow-hidden'>
                 <div className='px-[20px] mx-auto'>
                     <SectionHead data={howWeBuildSection.sectionHead} />
                 </div>

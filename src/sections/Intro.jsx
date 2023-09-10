@@ -7,10 +7,10 @@ import {easeIn, easeInOut, motion} from 'framer-motion'
 
 const Intro = () => {
     return (
-        <section id="about" className='mx-auto max-w-[1312px] '>
+        <section id="about" className='mx-auto max-w-[1312px] overflow-hidden'>
             
 
-            <div className='lg:hidden mt-[59px] px-[20px]'>
+            <div className='lg:hidden mt-[59px] px-[20px] overflow-hidden'>
                 <div className='mx-auto w-fit text-center mb-[36px]'>
                     <motion.h2 className='mb-[16px] font-bold text-[26px] md:text-[38px] text-white'
                     initial={{y: '-100%', opacity: 0}}
@@ -69,7 +69,7 @@ const Intro = () => {
 
             {/* DESCTOP SECTION */}
 
-            <div className='hidden lg:block px-[20px] mx-auto'>
+            <div className='hidden lg:block px-[20px] mx-auto overflow-hidden'>
 
                 <section>
                     

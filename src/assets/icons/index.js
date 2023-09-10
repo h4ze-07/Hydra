@@ -19,8 +19,6 @@ import twitter from './twitter.svg';
 import pinterest from './pinterest.svg';
 import youtube from './youtube.svg';
 
-import FooterLines from './footerLines.svg';
-
 import footerMenuLine from './footerMenuLine.svg'
 
 export {
@@ -39,6 +37,5 @@ export {
     twitter,
     pinterest,
     youtube,
-    FooterLines,
     footerMenuLine
 }

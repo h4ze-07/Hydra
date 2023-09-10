@@ -7,7 +7,7 @@ import { color, delay, easeOut, motion } from 'framer-motion';
 
 const Footer = () => {
     return (
-        <footer className='footer mx-auto max-w-[1312px] mt-[81px] '>
+        <footer className='footer mx-auto max-w-[1312px] mt-[81px] overflow-hidden'>
             
             <div className='max-w-[1312px]'>
                 <div className='px-[20px] mx-auto'>
