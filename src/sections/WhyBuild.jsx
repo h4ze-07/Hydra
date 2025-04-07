@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import SectionHead from '../components/SectionHead';
-import { whyBuildCards, whyBuildHead } from '../constants';
-import WhyBuildCard from '../components/WhyBuildCard';
-import useCreateSider from '../hooks/useCreateSider';
-import SliderBtnPrev from '../components/SliderBtnPrev';
 import SliderBtnNext from '../components/SliderBtnNext';
+import SliderBtnPrev from '../components/SliderBtnPrev';
+import WhyBuildCard from '../components/WhyBuildCard';
+import { whyBuildCards, whyBuildHead } from '../constants';
+import useCreateSider from '../hooks/useCreateSider';
 
 import { motion } from 'framer-motion';
 
@@ -14,23 +14,23 @@ const WhyBuild = () => {
 
     return (
         <section id='services' className='mx-auto max-w-[1312px] mt-[60px] md:mt-[111px] overflow-hidden'>
-            
+
             {/* MOBILE SECTION */}
             <section className='md:hidden'>
 
                 <motion.h2 className='text-white font-bold text-[26px] mb-[16px] text-center'
-                initial={{opacity: 0, x: '-100%'}}
-                whileInView={{opacity: 1, x: 0}}
-                viewport={{once: false}}
-                transition={{duration: 0.6, delay: 0.3}}
+                    initial={{ opacity: 0, x: '-100%' }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
                 >
                     {whyBuildHead.title}
                 </motion.h2>
                 <motion.h3 className='text-white font-light text-[26px] text-center'
-                initial={{opacity: 0, x: '100%'}}
-                whileInView={{opacity: 1, x: 0}}
-                viewport={{once: false}}
-                transition={{duration: 0.6, delay: 0.6}}
+                    initial={{ opacity: 0, x: '100%' }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
                 >
                     {whyBuildHead.subtitle}
                 </motion.h3>
@@ -38,7 +38,7 @@ const WhyBuild = () => {
                 <div className='flex justify-center relative items-center mt-[26px] w-fit mx-auto px-[41px]'>
                     <SliderBtnPrev func={prevSlider} />
                     <WhyBuildCard data={data} />
-                    <SliderBtnNext func = {nextSlider} />
+                    <SliderBtnNext func={nextSlider} />
                 </div>
             </section>
 

@@ -1,121 +1,145 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
-  background-color: #302C42;
+	background-color: #302c42;
 }
-
 
 /* COMMON */
 
 .mobileSlidersBtn {
-  background: linear-gradient(268deg, #C0B7E8 -0.6%, #8176AF 98.31%);
-
+	background: linear-gradient(268deg, #c0b7e8 -0.6%, #8176af 98.31%);
 }
 
 /* HERO SECTION */
 
+.headerBtn1 {
+	background-color: transparent;
+	transition: background-color 0.4s;
+}
+
+.headerBtn1:hover {
+	background-color: #8176af;
+}
+
+.hero-sec-btn svg {
+	transition: transform 0.4s;
+}
+
+.hero-sec-btn:hover svg {
+	transform: translateX(20px);
+}
+
 .headerBtnGradient {
-  background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+	background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+	transition: all 0.4s;
 }
 
 .headerBtnGradient:hover {
-  background: linear-gradient(20deg, #C0B7E8 0%, #8176AF 100%);
-  color: #FFF;
+	background: linear-gradient(20deg, #c0b7e8 0%, #8176af 100%);
+	color: #fff;
 }
-
 
 .heroInfo {
-  background: radial-gradient(290.76% 50.13% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
+	background: radial-gradient(
+		290.76% 50.13% at 50% 53.89%,
+		rgba(58, 52, 86, 0.95) 0%,
+		#211e2e 100%
+	);
+}
+.heroInfo--mob {
+	width: 600px;
+	height: 125px;
 }
 
+@media screen and (max-width: 650px) {
+	.heroInfo--mob {
+		width: 100%;
+	}
+}
 
 /* INTRO SECTION */
 
-
 .introBtn {
-  background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+	background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
 }
 
 .introBtn:hover {
-  background: linear-gradient(20deg, #C0B7E8 0%, #8176AF 100%);
-  color: #FFF;
+	background: linear-gradient(20deg, #c0b7e8 0%, #8176af 100%);
+	color: #fff;
 }
 
 /* WHY WE BUILD SECTION */
 
 .whyBuildCard {
-  background: radial-gradient(50% 50% at 50% 50%, #433D60 0%, #211E2E 100%);
+	background: radial-gradient(50% 50% at 50% 50%, #433d60 0%, #211e2e 100%);
 }
 
 .whyBuildCard button {
-  background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+	background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
 }
 
 .whyBuildCard button:hover {
-  background: linear-gradient(20deg, #C0B7E8 0%, #8176AF 100%);
-  color: #FFF;
+	background: linear-gradient(20deg, #c0b7e8 0%, #8176af 100%);
+	color: #fff;
 }
 
 /* TECHNOLOGIES SECTION*/
 
-
 .technologies {
-  box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
-  background: url('./assets/images/techsBg.jpg') no-repeat;
-  background-size: cover;
-  background-position: center;
+	box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
+	background: url("./assets/images/techsBg.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 .techBtn {
-  background: linear-gradient(268deg, #C0B7E8 -0.6%, #8176AF 98.31%);
+	background: linear-gradient(268deg, #c0b7e8 -0.6%, #8176af 98.31%);
 }
 
 .techBtn:hover {
-  background: linear-gradient(20deg, #C0B7E8 0%, #8176AF 100%);
-  color: #FFF;
+	background: linear-gradient(20deg, #c0b7e8 0%, #8176af 100%);
+	color: #fff;
 }
 
 /* HOW WE BUILD SECTION */
 
 .howWeBuild {
-  background: url('./assets/icons/howWeBuildLine.svg');
-  background-repeat: no-repeat;
-  background-position: top 20px left 0;
-  background-size: contain;
+	background: url("./assets/icons/howWeBuildLine.svg");
+	background-repeat: no-repeat;
+	background-position: top 20px left 0;
+	background-size: contain;
 }
 
 .buildCircle {
-  background: linear-gradient(251deg, #C0B7E8 12.87%, #8176AF 89.33%);
+	background: linear-gradient(251deg, #c0b7e8 12.87%, #8176af 89.33%);
 }
-
 
 /* CONTACT SECTION */
 
 .contact-form {
-  background: radial-gradient(50% 50% at 50% 50%, #403A5F 0%, #211E2E 100%);
+	background: radial-gradient(50% 50% at 50% 50%, #403a5f 0%, #211e2e 100%);
 }
 
 .formBtn {
-  background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+	background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
 }
 
 .formBtn:hover {
-  background: linear-gradient(20deg, #C0B7E8 0%, #8176AF 100%);
-  color: #FFF;
+	background: linear-gradient(20deg, #c0b7e8 0%, #8176af 100%);
+	color: #fff;
 }
 
 .inputFormStyles {
-  @apply bg-transparent rounded-[40px] text-white border-2 border-white py-[18px] px-[29px] placeholder:text-[#FFF] placeholder:text-[14px] outline-none 
+	@apply bg-transparent rounded-[40px] text-white border-2 border-white py-[18px] px-[29px] placeholder:text-[#FFF] placeholder:text-[14px] outline-none;
 }
 
 /* FOOTER */
@@ -127,15 +151,15 @@ body {
 } */
 
 .groupLinks {
-  @apply hidden lg:flex flex-col gap-3 items-start
+	@apply hidden lg:flex flex-col gap-3 items-start;
 }
 
 .footerBtn {
-  background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
-  @apply rounded-[40px] mt-[47px] mb-[61px] w-full max-w-[295px] md:max-w-[214px] block mx-auto md:mx-0 text-[#343045] font-bold text-[14px] py-[19px] md:py-[17px] md:text-[12px]
+	background: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+	@apply rounded-[40px] mt-[47px] mb-[61px] w-full max-w-[295px] md:max-w-[214px] block mx-auto md:mx-0 text-[#343045] font-bold text-[14px] py-[19px] md:py-[17px] md:text-[12px];
 }
 
 .footerBtn:hover {
-  background: linear-gradient(20deg, #C0B7E8 0%, #8176AF 100%);
-  color: #FFF;
+	background: linear-gradient(20deg, #c0b7e8 0%, #8176af 100%);
+	color: #fff;
 }
